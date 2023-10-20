@@ -11,6 +11,11 @@ autoload -U compinit; compinit
 _comp_options+=(globdots) # With hidden files
 source $ZDOTDIR/plugins/completion.zsh
 
+setopt INC_APPEND_HISTORY
+
+export SAVEHIST=1000000
+export HISTSIZE=2000
+
 source $ZDOTDIR/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -20,10 +25,10 @@ source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /Users/aromia/.config/zsh/usr/fsleep.zsh
 alias tsleep="sudo pmset disablesleep 0"
 
+export DEV="/Users/aromia/Creation/Programming"
 alias dev="cd /Users/aromia/Creation/Programming;ls"
 
 source $ZDOTDIR/usr/vscodeAlias.zsh
-source $ZDOTDIR/usr/pdfrange.zsh
 
 alias obsLearn="open 'obsidian://open?vault=LearningMaterial'"
 alias obsNote="open 'obsidian://open?vault=Aromia_Notebook'"
@@ -33,6 +38,9 @@ alias ea="exa -a"
 alias el="exa -l"
 alias ela="exa -la"
 
+source $ZDOTDIR/usr/pythonPackage.zsh
+source $ZDOTDIR/usr/pdfrange.zsh
+# source $ZDOTDIR/usr/pdfpng.zsh
 alias pdfpng="pdftocairo -png -r 300"
 alias zshconfig="vim ${ZDOTDIR}/.zshrc"
 alias touchid="open /etc/pam.d/; echo -n 'auth       sufficient     pam_tid.so' | pbcopy; vim /etc/pam.d/sudo"
