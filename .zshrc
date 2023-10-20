@@ -40,8 +40,7 @@ alias ela="exa -la"
 
 source $ZDOTDIR/usr/pythonPackage.zsh
 source $ZDOTDIR/usr/pdfrange.zsh
-# source $ZDOTDIR/usr/pdfpng.zsh
-alias pdfpng="pdftocairo -png -r 300"
+source $ZDOTDIR/usr/pdfpng.zsh
 alias zshconfig="vim ${ZDOTDIR}/.zshrc"
 alias touchid="open /etc/pam.d/; echo -n 'auth       sufficient     pam_tid.so' | pbcopy; vim /etc/pam.d/sudo"
 alias p10kconfig="vim ~/.config/zsh/.p10k.zsh"
