@@ -8,4 +8,3 @@ alias vsIo="code /Users/aromia/Creation/Programming/IoT/IoT.code-workspace"
 alias vsWeb="code /Users/aromia/Creation/Programming/WebDev/WebDev.code-workspace"
 alias vsGo="code /Users/aromia/Creation/Programming/Go/Go.code-workspace"
 alias vsTex="code /Users/aromia/Creation/Programming/LaTeX/LaTeX.code-workspace"
-

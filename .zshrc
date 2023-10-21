@@ -74,7 +74,7 @@ alias ea="exa -a"
 alias el="exa -l"
 alias ela="exa -la"
 
-source $ZDOTDIR/usr/pythonPackage.zsh
+source $ZDOTDIR/usr/pythonPackage_namespace.zsh
 source $ZDOTDIR/usr/pdfRange.zsh
 source $ZDOTDIR/usr/pdfPng.zsh
 source $ZDOTDIR/usr/mkfile.zsh
@@ -86,6 +86,8 @@ alias powerusage="top -stats pid,command,power -o power"
 alias keybr="dev; cd GitHubRepo/keybr.com; open http://localhost:3000; npm start"
 alias huaweiyun="echo -n WKZ!T@yBVdG8yba | pbcopy; ssh root@114.115.138.231"
 alias clash="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+
+alias ga="git commit -a -m"
 
 
 #############################
