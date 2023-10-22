@@ -54,11 +54,11 @@ source /Users/aromia/.config/zsh/usr/fsleep.zsh
 alias tsleep="sudo pmset disablesleep 0"
 
 
-######################
-#                    #
-# Aliases and Scripts#
-#                    #
-######################
+#######################
+#                     #
+# Aliases and Scripts #
+#                     #
+#######################
 
 
 export DEV="/Users/aromia/Creation/Programming"
@@ -68,6 +68,7 @@ source $ZDOTDIR/usr/vscodeAlias.zsh
 
 alias obsLearn="open 'obsidian://open?vault=LearningMaterial'"
 alias obsNote="open 'obsidian://open?vault=Aromia_Notebook'"
+alias obsDev="open 'obsidian://open?vault=Dev_Notebook'"
 
 alias ls="exa"
 alias ea="exa -a"

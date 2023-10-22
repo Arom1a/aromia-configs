@@ -8,6 +8,7 @@ fsleep()
         time=$((10 * 60))
     else
         time=$(($1 * 60))
+        time=$(echo $time | awk -F . '{print $1}')
     fi
 
     date -r $(($(date +%s) + $time)) +'Sleep will be disabled until %H:%M:%S. You can interupt by pressing enter ...'
