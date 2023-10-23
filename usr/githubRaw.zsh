@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-githubRaw()
-{
-
-}
