@@ -50,7 +50,6 @@ source $ZDOTDIR/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /Users/aromia/.config/zsh/usr/fsleep.zsh
 alias tsleep="sudo pmset disablesleep 0"
 
 
@@ -60,35 +59,29 @@ alias tsleep="sudo pmset disablesleep 0"
 #                     #
 #######################
 
+# Vim keybinding
+bindkey -v
+export KEYTIMEOUT=1
 
-export DEV="/Users/aromia/Creation/Programming"
-alias dev="cd /Users/aromia/Creation/Programming;ls"
+# Aliases for VScode
+source $ZDOTDIR/usr/alias-files/vscode_aliases.zsh
 
-source $ZDOTDIR/usr/vscodeAlias.zsh
+# Aliases for Obsidian
+source $ZDOTDIR/usr/alias-files/obsidian_aliases.zsh
 
-alias obsLearn="open 'obsidian://open?vault=LearningMaterial'"
-alias obsNote="open 'obsidian://open?vault=Aromia_Notebook'"
-alias obsDev="open 'obsidian://open?vault=Dev_Notebook'"
+# Aliases for cli tools
+source $ZDOTDIR/usr/alias-files/cli_aliases.zsh
 
-alias ls="exa"
-alias ea="exa -a"
-alias el="exa -l"
-alias ela="exa -la"
+# Aliases for misc stuff
+source $ZDOTDIR/usr/alias-files/misc_aliases.zsh
 
-source $ZDOTDIR/usr/pythonPackage_namespace.zsh
-source $ZDOTDIR/usr/pdfRange.zsh
-source $ZDOTDIR/usr/pdfPng.zsh
-source $ZDOTDIR/usr/mkfile.zsh
-source $ZDOTDIR/usr/githubRaw.zsh
-alias zshconfig="vim ${ZDOTDIR}/.zshrc"
-alias touchid="open /etc/pam.d/; echo -n 'auth       sufficient     pam_tid.so' | pbcopy; vim /etc/pam.d/sudo"
-alias p10kconfig="vim ~/.config/zsh/.p10k.zsh"
-alias powerusage="top -stats pid,command,power -o power"
-alias keybr="dev; cd GitHubRepo/keybr.com; open http://localhost:3000; npm start"
-alias huaweiyun="echo -n WKZ!T@yBVdG8yba | pbcopy; ssh root@114.115.138.231"
-alias clash="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
-
-alias ga="git commit -a -m"
+# Importing scripts
+source $ZDOTDIR/usr/scripts/python_package.zsh
+source $ZDOTDIR/usr/scripts/pdfrange.zsh
+source $ZDOTDIR/usr/scripts/pdfpng.zsh
+source $ZDOTDIR/usr/scripts/cfile.zsh
+source $ZDOTDIR/usr/scripts/githubraw.zsh
+source $ZDOTDIR/usr/scripts/fsleep.zsh
 
 
 #############################

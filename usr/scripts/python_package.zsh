@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-pyPackUpdate()
+py_pack_update()
 {
     result="$(pip list --outdated)"
     if [ $result = $null ];then
@@ -10,12 +10,12 @@ pyPackUpdate()
     fi
 }
 
-pyGetPackList()
+py_get_pack_list()
 {
     echo "$(pip list | tail -n +3 | awk '{print $1}')" > "packages_python$(python3 --version | awk '{print $2}').txt"
 }
 
-pyGetEnvList()
+py_get_env_list()
 {
     pip freeze > requirements.txt
 }
