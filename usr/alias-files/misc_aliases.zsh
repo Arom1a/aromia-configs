@@ -1,5 +1,5 @@
 export DEV="/Users/aromia/Creation/Programming"
-alias dev="cd /Users/aromia/Creation/Programming;ls"
+alias dev="cd /Users/aromia/Creation/Programming;ea"
 alias zshconfig="code $ZDOTDIR"
 alias touchid="open /etc/pam.d/; echo -n 'auth       sufficient     pam_tid.so' | pbcopy; vim /etc/pam.d/sudo"
 alias p10kconfig="vim ~/.config/zsh/.p10k.zsh"
