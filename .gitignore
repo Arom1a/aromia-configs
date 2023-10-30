@@ -3,5 +3,5 @@
 plugins/
 themes/
 .DS_Store
-.zcompdump
+.zcompdump*
 .zsh_history
