@@ -5,5 +5,6 @@ alias touchid="open /etc/pam.d/; echo -n 'auth       sufficient     pam_tid.so' 
 alias p10kconfig="vim ~/.config/zsh/.p10k.zsh"
 alias powerusage="top -stats pid,command,power -o power"
 alias keybr="cd /Users/aromia/Creation/Programming; cd GitHubRepo/keybr.com; open http://localhost:3000; npm start"
+alias mktp="cd /Users/aromia/Creation/Programming/GitHubRepo/monkeytype; clash; npm run dev; unclash"
 alias clash="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unclash="export https_proxy='' http_proxy='' all_proxy=''"
