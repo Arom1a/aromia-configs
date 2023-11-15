@@ -15,7 +15,7 @@ githubraw()
 
     rawUrl=${oriUrl/github.com/raw.githubusercontent.com}
     rawUrl=${rawUrl/blob\//''}
-    curl $rawUrl > $directory
+    curl $rawUrl -O
 
     export https_proxy='' http_proxy='' all_proxy=''
 }
