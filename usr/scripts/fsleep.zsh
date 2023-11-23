@@ -1,4 +1,5 @@
 #!/usr/zsh
+zmodload zsh/mathfunc
 
 fsleep()
 {
