@@ -9,3 +9,4 @@ alias mktp="cd /Users/aromia/Creation/Programming/GitHubRepo/monkeytype; docker 
 alias clash="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unclash="export https_proxy='' http_proxy='' all_proxy=''"
 alias fghjkl="fsleep"
+alias share="bunx serve ~/Documents/share -p 2305 &"
