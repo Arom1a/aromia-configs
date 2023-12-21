@@ -16,6 +16,7 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 fi
 
+export PICO_SDK_PATH=/Users/aromia/Creation/Programming/GitHubRepo/pico/pico-sdk
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
