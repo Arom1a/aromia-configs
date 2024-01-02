@@ -10,3 +10,4 @@ alias clash="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.
 alias unclash="export https_proxy='' http_proxy='' all_proxy=''"
 alias fghjkl="fsleep"
 alias share="bunx serve ~/Documents/share -p 2305 &"
+alias wyycover="python /Users/aromia/Creation/Programming/Python/pic_downloader/wyycover.py"
