@@ -15,7 +15,7 @@ fsleep()
             time=$(( $1 * 60 ))
             time=$(( int($time) ))
         fi
-    date -r $(( $(date +%s) + $time )) +'Sleep will be disabled until %H:%M:%S. You can interupt wieh enter key ...'
+    date -r $(( $(date +%s) + $time )) +'Sleep will be disabled until %H:%M:%S. You can interupt with enter key ...'
     read -t $time
     fi
 
