@@ -17,7 +17,12 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 fi
 
 export PICO_SDK_PATH=/Users/aromia/Creation/Programming/GitHubRepo/pico/pico-sdk
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 
 ###################
