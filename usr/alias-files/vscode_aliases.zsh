@@ -1,3 +1,4 @@
+alias c="open -a \"Visual Studio Code\""
 alias vsNote="code /Users/aromia/Creation/Notebook/Notebook.code-workspace"
 alias vsCpp="code /Users/aromia/Creation/Programming/Cpp/Cpp.code-workspace"
 alias vsPy="code /Users/aromia/Creation/Programming/Python/Python.code-workspace"
