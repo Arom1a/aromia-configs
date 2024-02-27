@@ -91,6 +91,9 @@ source $ZDOTDIR/usr/alias-files/cli_aliases.zsh
 # Aliases for misc stuff
 source $ZDOTDIR/usr/alias-files/misc_aliases.zsh
 
+# Aliases for git
+source $ZDOTDIR/usr/alias-files/git_aliases.zsh
+
 # Importing scripts
 source $ZDOTDIR/usr/scripts/python_package.zsh
 source $ZDOTDIR/usr/scripts/pdfrange.zsh

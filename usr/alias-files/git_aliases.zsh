@@ -1,0 +1,5 @@
+alias gs="git status"
+alias gcm="git commit -m"
+alias ga="git add"
+alias gr="git reset"
+alias gal="git add ."

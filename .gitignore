@@ -5,3 +5,4 @@ themes/
 .DS_Store
 .zcompdump*
 .zsh_history
+.zcompcache/
