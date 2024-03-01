@@ -1,4 +1,4 @@
-alias gs="git status"
+alias gs="git status -sb"
 alias gcm="git commit -m"
 alias ga="git add"
 alias gr="git reset"
