@@ -101,6 +101,7 @@ source $ZDOTDIR/usr/scripts/pdfpng.zsh
 source $ZDOTDIR/usr/scripts/cfile.zsh
 source $ZDOTDIR/usr/scripts/githubraw.zsh
 source $ZDOTDIR/usr/scripts/fsleep.zsh
+source $ZDOTDIR/usr/scripts/gettime.zsh
 
 
 #############################
