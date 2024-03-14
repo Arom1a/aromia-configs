@@ -2,5 +2,5 @@
 
 gettime()
 {
-    date +'%b%d_%Y-%H_%M'
+    date +'%Y_%b%d-%H_%M'
 }
