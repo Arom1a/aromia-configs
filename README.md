@@ -1,12 +1,42 @@
-# aromia-ZSHconfig
+# aromia-configs
 
 This repository is for storing my configs and scripts.
 
-Installation:
+<!-- ## Features
+
+For zsh:
+
+For alacritty:
+
+For git: -->
+
+## Installation
+
+Requirement:
+You must have [GNU Stow](https://www.gnu.org/software/stow/) installed.
+Install using
 
 ```zsh
-cd $HOME &&
-wget https://raw.githubusercontent.com/Arom1a/aromia-ZSHconfig/main/.zshenv &&
-cd $HOME/.config &&
-git clone https://github.com/Arom1a/aromia-ZSHconfig.git zsh
+# Arch
+sudo pacman -S stow
+
+# Homebrew
+brew install stow
+```
+
+Then
+
+```zsh
+cd ~ &&
+git clone https://github.com//arom1a/aromia-configs Configs &&
+cd Configs &&
+stow -v .
+```
+
+If you want to use keyd:
+
+```zsh
+sudo mkdir /etc/keyd &&
+cd .config &&
+sudo stow -vt /etc/keyd keyd
 ```
