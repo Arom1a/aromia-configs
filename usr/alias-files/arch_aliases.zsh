@@ -1,6 +1,6 @@
 alias pacin="sudo pacman -S"
 alias pacun="sudo pacman -R"
-alias pacfi="sudo pacman -Ss"
+alias pacfi="pacman -Ss"
 alias pacup="sudo pacman -Syu"
 
 alias prin="paru -S"
