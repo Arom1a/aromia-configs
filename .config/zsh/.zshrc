@@ -50,13 +50,14 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     # Powerlevel10k
     zinit ice depth=1; zinit light romkatv/powerlevel10k
     # ZSH plugins
-    zinit light zsh-users/zsh-autosuggestions
-    zinit light zsh-users/zsh-syntax-highlighting
     zinit light zsh-users/zsh-completions
-
+    autoload -U compinit; compinit
     source $ZDOTDIR/completion.zsh
 
-    autoload -U compinit; compinit
+    zinit light zsh-users/zsh-autosuggestions
+    zinit light zdharma-continuum/fast-syntax-highlighting
+
+
     zinit cdreplay -q
 
     eval "$(fzf --zsh)"
@@ -110,6 +111,9 @@ source $ZDOTDIR/usr/alias-files/misc_aliases.zsh
 # Aliases for git
 source $ZDOTDIR/usr/alias-files/git_aliases.zsh
 
+# Aliasses for tmux
+source $ZDOTDIR/usr/alias-files/tmux_aliases.zsh
+
 # Importing scripts
 source $ZDOTDIR/usr/scripts/python_package.zsh
 source $ZDOTDIR/usr/scripts/pdfrange.zsh
@@ -140,4 +144,14 @@ if [ "$(uname -m)" = "arm64" ]; then
         *) export PATH="$PNPM_HOME:$PATH" ;;
     esac
     # pnpm end
+fi
+
+if [ "$(uname -m)" = "x86_64" ]; then
+    # pnpm
+    export PNPM_HOME="/home/arom1a/.local/share/pnpm"
+    case ":$PATH:" in
+        *":$PNPM_HOME:"*) ;;
+        *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 fi
