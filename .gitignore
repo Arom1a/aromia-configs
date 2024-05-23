@@ -1,7 +1,5 @@
 .vscode/
 .zsh_sessions/
-plugins/
-themes/
 .DS_Store
 .zcompdump*
 .zsh_history
