@@ -152,6 +152,10 @@ if [ "$(uname -m)" = "x86_64" ]; then
     case ":$PATH:" in
         *":$PNPM_HOME:"*) ;;
         *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+    esac
+    # pnpm end
+
+    # bun completions
+    [ -s "/Users/aromia/.bun/_bun" ] &&
+    source "/Users/aromia/.bun/_bun"
 fi
