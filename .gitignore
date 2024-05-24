@@ -4,3 +4,4 @@
 .zcompdump*
 .zsh_history
 .zcompcache/
+lazy-lock.json
