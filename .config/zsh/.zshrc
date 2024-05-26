@@ -56,6 +56,7 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 
     zinit light zsh-users/zsh-autosuggestions
     zinit light zdharma-continuum/fast-syntax-highlighting
+    fast-theme XDG:catppuccin-mocha &>/dev/null
 
 
     zinit cdreplay -q

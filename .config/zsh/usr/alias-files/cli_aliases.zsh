@@ -11,3 +11,5 @@ alias del="trash -F" # Use Finder to move the file to the trash and can be put b
 alias npm="echo 'use fking pnpm plz!'"
 
 alias nv=nvim
+
+alias color_test="msgcat --color=test | head -n 11"

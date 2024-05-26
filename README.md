@@ -3,6 +3,9 @@
 This repository is for storing my configs and scripts.
 
 <!-- ## Features
+Themes: 
+Catppuccin: mocha as default
+nvim: lunar
 
 For zsh:
 
