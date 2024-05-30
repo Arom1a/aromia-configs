@@ -15,3 +15,5 @@ alias nv=nvim
 alias color_test="msgcat --color=test | head -n 11"
 
 alias venv="source ./venv/bin/activate"
+
+alias bstm="nvim ~/Creation/.brainstorm.md"
