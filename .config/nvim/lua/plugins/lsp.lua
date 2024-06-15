@@ -14,6 +14,7 @@ return {
         "json-lsp",
         "lua-language-server",
         "markdown-oxide",
+        "mdx-analyzer",
         "prettierd",
         "python-lsp-server",
         "rust-analyzer",
