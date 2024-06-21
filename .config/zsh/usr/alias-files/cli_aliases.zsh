@@ -3,6 +3,11 @@ alias ea="eza -a" # all
 alias el="eza -l" # long
 alias ela="eza -la" # long and all
 alias ead="eza -aD" # dir only
+alias et1="eza -a --tree --level=1"
+alias et2="eza -a --tree --level=2"
+alias et3="eza -a --tree --level=3"
+alias et4="eza -a --tree --level=4"
+alias et5="eza -a --tree --level=5"
 
 alias rg="rg -S" # Smart case: search case insensitively if is all lowercase. Otherwise, search case sensitively.
 
