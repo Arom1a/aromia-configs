@@ -15,3 +15,4 @@ alias qkd="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:
 if [ "$(uname -m)" = "x86_64" ]; then
   alias open="xdg-open"
 fi
+alias sshcmu="ssh markfan@unix.andrew.cmu.edu"
