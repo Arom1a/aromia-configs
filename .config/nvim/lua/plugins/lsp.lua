@@ -10,6 +10,7 @@ return {
         "cpptools",
         "docker-compose-language-service",
         "dockerfile-language-server",
+        "html-lsp",
         "isort",
         "json-lsp",
         "lua-language-server",
