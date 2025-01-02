@@ -1,0 +1,10 @@
+alias cg="cargo"
+
+alias cgb="cargo build"
+alias cgeb="cargo embed"
+alias cgi="cargo add"
+alias cou="cargo remove"
+alias cgin="cargo install"
+alias cgc="cargo check"
+alias cgr="cargo run"
+alias cgt="cargo test"

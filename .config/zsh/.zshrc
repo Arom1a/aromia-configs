@@ -115,14 +115,18 @@ source $ZDOTDIR/usr/alias-files/git_aliases.zsh
 # Aliasses for tmux
 source $ZDOTDIR/usr/alias-files/tmux_aliases.zsh
 
+# Aliasses for cargo
+source $ZDOTDIR/usr/alias-files/cargo_aliases.zsh
+
 # Importing scripts
-source $ZDOTDIR/usr/scripts/python_package.zsh
-source $ZDOTDIR/usr/scripts/pdfrange.zsh
-source $ZDOTDIR/usr/scripts/pdfpng.zsh
 source $ZDOTDIR/usr/scripts/cfile.zsh
-source $ZDOTDIR/usr/scripts/githubraw.zsh
 source $ZDOTDIR/usr/scripts/fsleep.zsh
 source $ZDOTDIR/usr/scripts/gettime.zsh
+source $ZDOTDIR/usr/scripts/githubraw.zsh
+source $ZDOTDIR/usr/scripts/pdf_clean_metadata.zsh
+source $ZDOTDIR/usr/scripts/pdfpng.zsh
+source $ZDOTDIR/usr/scripts/pdfrange.zsh
+source $ZDOTDIR/usr/scripts/python_package.zsh
 
 
 ###############
