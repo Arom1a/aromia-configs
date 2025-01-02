@@ -11,6 +11,7 @@ return {
         "--column",
         "--smart-case",
         "--hidden",
+        "--trim",
       },
       file_ignore_patterns = {
         "node_modules",
@@ -18,6 +19,11 @@ return {
         "dist",
         "pnpm-lock.yaml",
         "target",
+      },
+    },
+    pickers = {
+      find_files = {
+        find_command = { "rg", "--files", "--hidden", "--glob", "!.git/" },
       },
     },
   },
