@@ -12,6 +12,8 @@ return {
         "--smart-case",
         "--hidden",
         "--trim",
+        "--glob",
+        "!.git/",
       },
       file_ignore_patterns = {
         "node_modules",
