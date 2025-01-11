@@ -22,6 +22,11 @@ return {
         "pnpm-lock.yaml",
         "target",
       },
+      mappings = {
+        i = {
+          ["<esc>"] = require("telescope.actions").close,
+        },
+      },
     },
     pickers = {
       find_files = {
