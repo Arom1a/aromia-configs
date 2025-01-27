@@ -190,9 +190,16 @@ return {
         lualine_c = { "branch", "diff", "diagnostics" },
         lualine_x = {
           {
-            require("noice").api.statusline.mode.get,
-            cond = require("noice").api.statusline.mode.has,
+            "macro",
+            fmt = function()
+              local reg = vim.fn.reg_recording()
+              if reg ~= "" then
+                return "recording @" .. reg
+              end
+              return nil
+            end,
             color = { fg = "#ff9364" },
+            draw_empty = false,
           },
         },
         lualine_y = { "filetype", "progress" },
@@ -258,13 +265,13 @@ return {
         changedelete = { text = "~" },
       },
       -- stylua: ignore
-      keys = {
-        { "[h", "<cmd>Gitsigns nav_hunk prev<cr>",                desc = "Previous Hunk" },
-        { "]h", "<cmd>Gitsigns nav_hunk next<cr>",                desc = "Next Hunk" },
-        { "<leader>ghp", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview Hunk Inline"},
-        { "<leader>ghd", "<cmd>Gitsigns diffthis<cr>",            desc = "Diff This"},
-        { "ih", "<cmd>Gitsigns select_hunk<cr>", mode = { "o", "x" }, desc = "GitSigns Select Hunk" },
-      },
+    },
+    keys = {
+      { "[h", "<cmd>Gitsigns nav_hunk prev<cr>", desc = "Previous Hunk" },
+      { "]h", "<cmd>Gitsigns nav_hunk next<cr>", desc = "Next Hunk" },
+      { "<leader>ghp", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview Hunk Inline" },
+      { "<leader>ghd", "<cmd>Gitsigns diffthis<cr>", desc = "Diff This" },
+      { "ih", "<cmd>Gitsigns select_hunk<cr>", mode = { "o", "x" }, desc = "GitSigns Select Hunk" },
     },
   },
   {
