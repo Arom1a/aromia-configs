@@ -221,4 +221,9 @@ return {
     event = "BufReadPre",
     opts = {},
   },
+
+  {
+    "vidocqh/auto-indent.nvim",
+    opts = {},
+  },
 }
