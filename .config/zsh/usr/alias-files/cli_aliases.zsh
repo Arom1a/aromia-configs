@@ -23,3 +23,4 @@ alias color_test="msgcat --color=test | head -n 11"
 alias venv="source ./venv/bin/activate"
 
 alias bstm="nvim ~/Creation/.brainstorm.md"
+alias purge_DS="fd -ug .DS_Store -x rm"
