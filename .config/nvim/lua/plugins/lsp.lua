@@ -4,6 +4,8 @@ return {
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = vim.fn.argc(-1) == 0,
+    event = "VeryLazy",
     build = ":TSUpdate",
     main = "nvim-treesitter.configs",
     opts = {
@@ -140,6 +142,7 @@ return {
   -- formatting
   {
     "stevearc/conform.nvim",
+    event = "BufWritePre",
     config = function()
       require("conform").setup({
         formatters_by_ft = {

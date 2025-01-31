@@ -4,6 +4,7 @@ return {
   -- trim trailing whitespaces and blank lines
   {
     "cappyzawa/trim.nvim",
+    event = "BufReadPre",
     config = function()
       require("trim").setup({
         highlight = true,
@@ -15,6 +16,7 @@ return {
   -- smooth cursor
   {
     "sphamba/smear-cursor.nvim",
+    event = "VeryLazy",
     enabled = not vim.g.neovide,
     opts = {},
   },
@@ -22,6 +24,7 @@ return {
   -- highlight cursorword
   {
     "ya2s/nvim-cursorline",
+    event = "BufReadPre",
     opts = {
       cursorword = {
         hl = {
@@ -35,7 +38,7 @@ return {
   -- auto complete pairs, eg: '',"",(),[],{}
   {
     "windwp/nvim-autopairs",
-    event = "InsertEnter",
+    event = "BufReadPre",
     config = function()
       require("nvim-autopairs").setup()
     end,
@@ -44,6 +47,7 @@ return {
   -- auto detect buffer's indent size
   {
     "nmac427/guess-indent.nvim",
+    event = "VeryLazy",
     config = function()
       require("guess-indent").setup()
     end,
@@ -74,6 +78,7 @@ return {
   -- beautiful delimiters
   {
     "HiPhish/rainbow-delimiters.nvim",
+    event = "BufReadPre",
     config = function()
       local hl = {
         "SnacksIndent1",
@@ -167,7 +172,7 @@ return {
   -- better movement
   {
     "folke/flash.nvim",
-    event = "VeryLazy",
+    event = "BufReadPre",
     opts = {},
     -- stylua: ignore
     keys = {
@@ -200,7 +205,7 @@ return {
   -- vim surround
   {
     "kylechui/nvim-surround",
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       require("nvim-surround").setup()
     end,
@@ -215,6 +220,7 @@ return {
 
   {
     "vidocqh/auto-indent.nvim",
+    event = "BufReadPre",
     opts = {},
   },
 }

@@ -44,16 +44,22 @@ return {
       { "<leader>fc", "<cmd>Telescope command_history<cr>", { desc = "Telescope command history" } },
       { "<leader>fC", "<cmd>Telescope colorscheme<cr>", { desc = "Telescope change colorscheme" } },
     },
+    config = function(_, opts)
+      require("telescope").setup(opts)
+      require("telescope").load_extension("fzf")
+    end,
   },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
+    lazy = true,
     dependencies = { "nvim-telescope/telescope.nvim" },
-    build = "make",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
   },
 
   -- file tree
   {
     "nvim-neo-tree/neo-tree.nvim",
+    cmd = "Neotree",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
@@ -134,7 +140,6 @@ return {
     "folke/snacks.nvim",
     lazy = false,
     opts = {
-
       dashboard = { enabled = true, example = "compact_files" },
     },
     -- stylua: ignore
@@ -147,6 +152,7 @@ return {
   -- status line & message
   {
     "akinsho/bufferline.nvim",
+    lazy = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     keys = {
@@ -175,6 +181,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
@@ -239,6 +246,7 @@ return {
   },
   {
     "rcarriga/nvim-notify",
+    event = "VeryLazy",
     opts = {
       top_down = false,
       fps = 60,
@@ -248,6 +256,7 @@ return {
   -- git integration & scroll bar
   {
     "lewis6991/gitsigns.nvim",
+    event = "BufReadPre",
     opts = {
       signs = {
         add = { text = "+" },
@@ -256,15 +265,15 @@ return {
         topdelete = { text = "‾" },
         changedelete = { text = "~" },
       },
-      signs_staged = {
-        add = { text = "+" },
-        change = { text = "" },
-        delete = { text = "_" },
-        topdelete = { text = "‾" },
-        changedelete = { text = "~" },
-      },
-      -- stylua: ignore
+      -- signs_staged = {
+      --   add = { text = "+" },
+      --   change = { text = "" },
+      --   delete = { text = "_" },
+      --   topdelete = { text = "‾" },
+      --   changedelete = { text = "~" },
+      -- },
     },
+    -- stylua: ignore
     keys = {
       { "[h", "<cmd>Gitsigns nav_hunk prev<cr>", desc = "Previous Hunk" },
       { "]h", "<cmd>Gitsigns nav_hunk next<cr>", desc = "Next Hunk" },
@@ -275,6 +284,7 @@ return {
   },
   {
     "petertriho/nvim-scrollbar",
+    event = "BufReadPre",
     dependencies = { "lewis6991/gitsigns.nvim" },
     config = function()
       require("gitsigns").setup()
@@ -286,6 +296,7 @@ return {
   -- colorscheme
   {
     "lunarvim/lunar.nvim",
+    Lazy = true,
     -- priority = 1000,
     -- config = function()
     --   require("lunar").setup()
@@ -295,6 +306,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    Lazy = true,
     priority = 1000,
     config = function()
       require("catppuccin").setup({
