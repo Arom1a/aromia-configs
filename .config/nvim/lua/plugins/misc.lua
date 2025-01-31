@@ -189,6 +189,7 @@ return {
         css = { css = true },
       },
       user_default_options = {
+        names = false,
         mode = "virtualtext",
         virtualtext = "  ",
         virtualtext_mode = "background",
