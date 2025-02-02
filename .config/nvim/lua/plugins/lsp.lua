@@ -5,7 +5,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = vim.fn.argc(-1) == 0,
-    event = "VeryLazy",
+    event = "BufReadPre",
     build = ":TSUpdate",
     main = "nvim-treesitter.configs",
     opts = {
@@ -46,9 +46,11 @@ return {
   -- lsp
   {
     "neovim/nvim-lspconfig",
+    event = "BufReadPre",
   },
   {
     "williamboman/mason.nvim",
+    event = "VeryLazy",
     opts = {
       ensure_installed = {
         "astro-language-server",
@@ -114,27 +116,76 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    event = "BufReadPre",
     dependencies = { "saghen/blink.cmp", "neovim/nvim-lspconfig" },
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      require("mason-lspconfig").setup({
-        handlers = {
-          function(server_name)
-            if server_name == "lua_ls" then
-              require("lspconfig")[server_name].setup({
-                settings = {
-                  Lua = {
-                    diagnostics = {
-                      globals = { "vim" },
-                    },
-                  },
+
+      -- https://github.com/rust-lang/rust-analyzer/issues/13529#issuecomment-1660862875
+      local function get_project_rustanalyzer_settings()
+        local handle = io.open(vim.fn.resolve(vim.fn.getcwd() .. "/./.rust-analyzer.json"))
+        if not handle then
+          return {}
+        end
+        local out = handle:read("*a")
+        handle:close()
+        local config = vim.json.decode(out)
+        if type(config) == "table" then
+          return config
+        end
+        return {}
+      end
+
+      require("mason-lspconfig").setup({})
+
+      require("mason-lspconfig").setup_handlers({
+        function(server_name)
+          require("lspconfig")[server_name].setup({
+            capabilities = capabilities,
+          })
+        end,
+
+        ["lua_ls"] = function(server_name)
+          require("lspconfig")[server_name].setup({
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
                 },
-              })
-            else
-              require("lspconfig")[server_name].setup({ capabilities = capabilities })
-            end
-          end,
-        },
+              },
+            },
+            capabilities = capabilities,
+          })
+        end,
+
+        ["rust_analyzer"] = function(server_name)
+          require("lspconfig")[server_name].setup({
+            settings = {
+
+              ["rust-analyzer"] = vim.tbl_deep_extend(
+                "force",
+                {
+                  -- Defaults (can be overridden by .rust-analyzer.json)
+                },
+                get_project_rustanalyzer_settings(),
+                {
+                  -- Overrides
+                }
+              ),
+            },
+            capabilities = capabilities,
+          })
+        end,
+
+        ["clangd"] = function(server_name)
+          require("lspconfig")[server_name].setup({
+            cmd = {
+              "clangd",
+              "--header-insertion=never",
+            },
+            capabilities = capabilities,
+          })
+        end,
       })
     end,
   },
