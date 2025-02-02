@@ -113,3 +113,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+-- commentstring for each ft
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("commentstring"),
+  pattern = { "rust", "cpp" },
+  callback = function()
+    vim.opt_local.commentstring = "// %s"
+  end,
+})
