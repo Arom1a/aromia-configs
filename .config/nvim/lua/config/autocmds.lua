@@ -105,10 +105,11 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- rust inlay hints
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("LspAttach", {
   group = augroup("inlay_hints"),
-  pattern = { "rust" },
   callback = function()
-    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+    if vim.lsp.inlay_hint then
+      vim.lsp.inlay_hint.enable(true, { 0 })
+    end
   end,
 })
