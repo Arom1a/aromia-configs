@@ -139,6 +139,7 @@ return {
   {
     "folke/snacks.nvim",
     lazy = false,
+    priority = 950,
     opts = {
       dashboard = { enabled = true, example = "compact_files" },
     },
