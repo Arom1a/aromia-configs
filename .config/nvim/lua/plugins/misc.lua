@@ -218,9 +218,17 @@ return {
     opts = {},
   },
 
+  -- vscode-like auto-indent
   {
     "vidocqh/auto-indent.nvim",
     event = "BufReadPre",
     opts = {},
+  },
+
+  -- resolve git conflicts
+  {
+    "akinsho/git-conflict.nvim",
+    event = "BufReadPre",
+    config = true,
   },
 }
