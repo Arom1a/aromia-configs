@@ -71,6 +71,7 @@ return {
         "shfmt",
         "stylua",
         "tailwindcss-language-server",
+        "taplo",
         "yaml-language-server",
         "yamlfmt",
       },
@@ -206,6 +207,7 @@ return {
           json = { "prettierd", "prettier" },
           rust = { "rustfmt" },
           bash = { "shfmt" },
+          toml = { "taplo" },
         },
         format_on_save = {
           -- These options will be passed to conform.format()
