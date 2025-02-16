@@ -105,13 +105,9 @@ return {
     opts = {
       keymap = {
         preset = "super-tab",
-        cmdline = { preset = "enter" },
       },
       appearance = {
         nerd_font_variant = "mono",
-      },
-      sources = {
-        cmdline = {},
       },
     },
   },
