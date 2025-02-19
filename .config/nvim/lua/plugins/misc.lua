@@ -217,6 +217,18 @@ return {
     event = "BufReadPre",
     opts = {},
   },
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    opts = {
+      suppressed_dirs = {
+        "~/",
+        "~/Projects",
+        "~/Downloads",
+        "/",
+      },
+    },
+  },
 
   -- vscode-like auto-indent
   {
