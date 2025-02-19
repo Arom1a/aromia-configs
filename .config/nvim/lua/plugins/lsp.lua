@@ -120,7 +120,7 @@ return {
 
       -- https://github.com/rust-lang/rust-analyzer/issues/13529#issuecomment-1660862875
       local function get_project_rustanalyzer_settings()
-        local handle = io.open(vim.fn.resolve(vim.fn.getcwd() .. "/./.rust-analyzer.json"))
+        local handle = io.open(vim.fn.resolve(vim.fn.getcwd() .. "/./rust-analyzer.json"))
         if not handle then
           return {}
         end
