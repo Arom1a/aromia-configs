@@ -67,6 +67,9 @@ k.set("i", ";", ";<c-g>u")
 k.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Below" })
 k.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Above" })
 
+-- lsp rename
+k.set("n", "<f2>", "<cmd>lua vim.lsp.buf.rename()<cr>", { desc = "Rename Variable" })
+
 -- previous and next
 k.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 k.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
