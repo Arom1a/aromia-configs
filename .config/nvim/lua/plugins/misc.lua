@@ -78,6 +78,7 @@ return {
   -- beautiful delimiters
   {
     "HiPhish/rainbow-delimiters.nvim",
+    submodules = false,
     event = "BufReadPre",
     config = function()
       local hl = {
