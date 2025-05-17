@@ -49,7 +49,7 @@ return {
     event = "BufReadPre",
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     event = "VeryLazy",
     opts = {
       ensure_installed = {
@@ -112,9 +112,9 @@ return {
     },
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     event = "BufReadPre",
-    dependencies = { "saghen/blink.cmp", "neovim/nvim-lspconfig" },
+    dependencies = { "mason-org/mason.nvim", "saghen/blink.cmp", "neovim/nvim-lspconfig" },
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
@@ -133,57 +133,60 @@ return {
         return {}
       end
 
-      require("mason-lspconfig").setup({})
-
-      require("mason-lspconfig").setup_handlers({
-        function(server_name)
-          require("lspconfig")[server_name].setup({
-            capabilities = capabilities,
-          })
-        end,
-
-        ["lua_ls"] = function(server_name)
-          require("lspconfig")[server_name].setup({
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "vim" },
-                },
-              },
+      vim.lsp.config("lua_ls", {
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT",
             },
-            capabilities = capabilities,
-          })
-        end,
-
-        ["rust_analyzer"] = function(server_name)
-          require("lspconfig")[server_name].setup({
-            settings = {
-
-              ["rust-analyzer"] = vim.tbl_deep_extend(
-                "force",
-                {
-                  -- Defaults (can be overridden by .rust-analyzer.json)
-                },
-                get_project_rustanalyzer_settings(),
-                {
-                  -- Overrides
-                }
-              ),
+            diagnostics = {
+              globals = { "vim" },
             },
-            capabilities = capabilities,
-          })
-        end,
-
-        ["clangd"] = function(server_name)
-          require("lspconfig")[server_name].setup({
-            cmd = {
-              "clangd",
-              "--header-insertion=never",
-            },
-            capabilities = capabilities,
-          })
-        end,
+          },
+        },
       })
+      vim.lsp.config("rust_analyzer", {
+        settings = {
+          ["rust-analyzer"] = vim.tbl_deep_extend(
+            "force",
+            {
+              -- Defaults (can be overridden by .rust-analyzer.json)
+            },
+            get_project_rustanalyzer_settings(),
+            {
+              -- Overrides
+            }
+          ),
+        },
+      })
+      vim.lsp.config("clangd", {
+        settings = {
+          ["rust-analyzer"] = vim.tbl_deep_extend(
+            "force",
+            {
+              -- Defaults (can be overridden by .rust-analyzer.json)
+            },
+            get_project_rustanalyzer_settings(),
+            {
+              -- Overrides
+            }
+          ),
+        },
+      })
+
+      require("mason").setup()
+      require("mason-lspconfig").setup({})
+      -- require("mason-lspconfig").setup_handlers({
+      --   ["clangd"] = function(server_name)
+      --     require("lspconfig")[server_name].setup({
+      --       cmd = {
+      --         "clangd",
+      --         "--header-insertion=never",
+      --       },
+      --       capabilities = capabilities,
+      --     })
+      --   end,
+      -- })
     end,
   },
 
