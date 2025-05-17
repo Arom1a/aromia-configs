@@ -280,6 +280,7 @@ return {
       { "]h", "<cmd>Gitsigns nav_hunk next<cr>", desc = "Next Hunk" },
       { "<leader>ghp", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview Hunk Inline" },
       { "<leader>ghd", "<cmd>Gitsigns diffthis<cr>", desc = "Diff This" },
+      { "<leader>ghr", "<cmd>Gitsigns reset_hunk<cr>", desc = "Git Reset Hunk" },
       { "ih", "<cmd>Gitsigns select_hunk<cr>", mode = { "o", "x" }, desc = "GitSigns Select Hunk" },
     },
   },
