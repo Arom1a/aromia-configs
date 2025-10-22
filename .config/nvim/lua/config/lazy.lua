@@ -20,6 +20,24 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- VSCode Neovim
+if vim.g.vscode then
+  vim.cmd([[
+    map j gj
+    map k gk
+    "map <Down> gj
+    "map <Up> gk
+  ]])
+
+  require("lazy").setup({
+    spec = { { import = "vscode-plugins" } },
+    defaults = { version = "*" },
+    checker = { enabled = true },
+  })
+
+  return
+end
+
 require("lazy").setup({
   spec = {
     { import = "plugins" },

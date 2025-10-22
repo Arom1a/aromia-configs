@@ -212,25 +212,6 @@ return {
     end,
   },
 
-  -- project management
-  {
-    "folke/persistence.nvim",
-    event = "BufReadPre",
-    opts = {},
-  },
-  {
-    "rmagatti/auto-session",
-    lazy = false,
-    opts = {
-      suppressed_dirs = {
-        "~/",
-        "~/Projects",
-        "~/Downloads",
-        "/",
-      },
-    },
-  },
-
   -- vscode-like auto-indent
   {
     "vidocqh/auto-indent.nvim",
