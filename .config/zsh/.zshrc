@@ -84,6 +84,7 @@ export SAVEHIST=1000000
 export HISTSIZE=20000
 
 bindkey -v
+bindkey "^?" backward-delete-char
 export KEYTIMEOUT=1
 
 
@@ -149,6 +150,9 @@ if [ "$(uname -m)" = "arm64" ]; then
         *) export PATH="$PNPM_HOME:$PATH" ;;
     esac
     # pnpm end
+
+    # ghcup-env
+    [ -f "/Users/aromia/.ghcup/env" ] && . "/Users/aromia/.ghcup/env"
 fi
 
 if [ "$(uname -m)" = "x86_64" ]; then

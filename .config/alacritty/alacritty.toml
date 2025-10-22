@@ -6,11 +6,17 @@ normal = { family = "Hack Nerd Font" }
 decorations = "Buttonless"
 opacity = 0.85
 padding = { x = 12, y = 12 }
+option_as_alt = "Both"
 
 [general]
 import = [
-  # "~/.config/alacritty/catppuccin-latte.toml"
   # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-latte.toml",
   # "~/.config/alacritty/catppuccin-macchiato.toml"
-  "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml",
+  # "~/.config/alacritty/pencil_light.toml",
+  "~/.config/alacritty/pencil_dark.toml",
 ]
+
+[env]
+TERM = "xterm-256color"
