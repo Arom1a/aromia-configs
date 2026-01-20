@@ -5,18 +5,14 @@
 [user]
 	email = f2940015504@gmail.com
 	name = Aromia
-    signingkey = /home/arom1a/.ssh/aromia.pub
+	singingkey = 3847BBE2017F39E2
 [core]
     ignorecase = false
-[gpg]
-    format = ssh
 [commit]
     gpgsign = true
 [credential "https://github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [init]
 	defaultBranch = main

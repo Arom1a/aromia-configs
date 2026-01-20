@@ -36,7 +36,18 @@ if [ "$(uname -m)" = "arm64" ]; then
 fi
 
 # Cargo
-. "$HOME/.cargo/env"
+if [ "$(uname -m)" = "arm64" ]; then
+    . "$HOME/.cargo/env"
+fi
+
+# 15150 TA
+if [ "$(uname -m)" = "arm64" ]; then
+    export PATH="/Users/aromia/bin:$PATH"
+    export PATH="$HOMEBREW_PREFIX/opt/gpatch/libexec/gnubin:$PATH"
+fi
+
+GPG_TTY=$(tty)
+export GPG_TTY
 
 
 ###############

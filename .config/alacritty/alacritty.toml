@@ -1,5 +1,5 @@
 [font]
-size = 10.0
+size = 14.0
 normal = { family = "Hack Nerd Font" }
 
 [window]
@@ -10,12 +10,11 @@ option_as_alt = "Both"
 
 [general]
 import = [
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-latte.toml",
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml",
-  # "~/.config/alacritty/pencil_light.toml",
-  "~/.config/alacritty/pencil_dark.toml",
+  "~/.config/alacritty/iris.toml",
+  # "~/.config/alacritty/rose-pine-moon.toml",
+  # "~/.config/alacritty/pencil_dark.toml",
+  # "~/.config/alacritty/rose-pine.toml",
+  # "~/.config/alacritty/rose-pine-dawn.toml",
 ]
 
 [env]
