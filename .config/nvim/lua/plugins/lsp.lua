@@ -160,33 +160,14 @@ return {
         },
       })
       vim.lsp.config("clangd", {
-        settings = {
-          ["rust-analyzer"] = vim.tbl_deep_extend(
-            "force",
-            {
-              -- Defaults (can be overridden by .rust-analyzer.json)
-            },
-            get_project_rustanalyzer_settings(),
-            {
-              -- Overrides
-            }
-          ),
+        cmd = {
+          "clangd",
+          "--header-insertion=never",
         },
       })
 
       require("mason").setup()
       require("mason-lspconfig").setup({})
-      -- require("mason-lspconfig").setup_handlers({
-      --   ["clangd"] = function(server_name)
-      --     require("lspconfig")[server_name].setup({
-      --       cmd = {
-      --         "clangd",
-      --         "--header-insertion=never",
-      --       },
-      --       capabilities = capabilities,
-      --     })
-      --   end,
-      -- })
     end,
   },
 
