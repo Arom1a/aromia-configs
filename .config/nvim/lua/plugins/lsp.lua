@@ -32,6 +32,7 @@ return {
         "toml",
         "tsx",
         "typescript",
+        "typst",
         "vim",
         "vimdoc",
         "xml",
@@ -72,6 +73,7 @@ return {
         "stylua",
         "tailwindcss-language-server",
         "taplo",
+        "tinymist",
         "yaml-language-server",
         "yamlfmt",
       },
@@ -108,6 +110,10 @@ return {
       },
       appearance = {
         nerd_font_variant = "mono",
+      },
+      snippets = { preset = "luasnip" },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
       },
     },
   },
@@ -163,6 +169,13 @@ return {
         cmd = {
           "clangd",
           "--header-insertion=never",
+        },
+      })
+      vim.lsp.config("tinymist", {
+        settings = {
+          formatterMode = "typstyle",
+          exportPdf = "never",
+          semanticTokens = "disable",
         },
       })
 
