@@ -24,7 +24,7 @@ return {
     snippetType = "autosnippet",
   }, {
     t("$"),
-    i(1),
+    i(0),
     t("$"),
   }),
 
@@ -34,7 +34,7 @@ return {
     snippetType = "autosnippet",
   }, {
     t({ "$", "  " }),
-    i(1),
+    i(0),
     t({ "", "$" }),
   }),
 
@@ -46,7 +46,7 @@ return {
     show_condition = in_math,
   }, {
     t("arrow("),
-    i(1),
+    i(0),
     t(")"),
   }),
 
@@ -55,6 +55,6 @@ return {
     trig = "#NPG",
     snippetType = "autosnippet",
   }, {
-    t({ "#pagebreak()" }),
+    t({ "#pagebreak(weak: true)" }),
   }),
 }
