@@ -69,6 +69,7 @@ k.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comm
 
 -- lsp rename
 k.set("n", "<f2>", "<cmd>lua vim.lsp.buf.rename()<cr>", { desc = "Rename Variable" })
+k.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Action" })
 
 -- previous and next
 k.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
