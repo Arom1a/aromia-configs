@@ -1,3 +1,6 @@
+# init
+alias ginit="git init"
+
 # status
 alias gs="git status -sb"
 
@@ -13,9 +16,6 @@ alias gcam="git commit --amend"
 
 # reset
 alias grst="git reset"
-
-# restore
-alias grest="git restore"
 
 # push pull clone
 alias gph="git push"
