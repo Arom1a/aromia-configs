@@ -309,12 +309,24 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     Lazy = true,
+    -- priority = 1000,
+    -- config = function()
+    --   require("catppuccin").setup({
+    --     flavour = "mocha",
+    --   })
+    --   vim.cmd.colorscheme("catppuccin")
+    -- end,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    Lazy = true,
     priority = 1000,
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
+      require("rose-pine").setup({
+        variant = "moon",
       })
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
 }
