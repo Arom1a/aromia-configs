@@ -2,10 +2,7 @@ return {
   -- mdx syntax highlighting
   {
     "davidmh/mdx.nvim",
-    event = "BufEnter *.mdx",
+    lazy = false,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("mdx").setup()
-    end,
   },
 }
