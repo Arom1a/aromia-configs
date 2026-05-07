@@ -189,12 +189,12 @@ return {
       require("conform").setup({
         formatters_by_ft = {
           lua = { "stylua" },
-          astro = { "prettierd", "prettier" },
-          html = { "prettierd", "prettier" },
-          css = { "prettierd", "prettier" },
-          javascript = { "prettierd", "prettier" },
-          typescript = { "prettierd", "prettier" },
-          json = { "prettierd", "prettier" },
+          astro = { "prettierd" },
+          html = { "prettierd" },
+          css = { "prettierd" },
+          javascript = { "prettierd" },
+          typescript = { "prettierd" },
+          json = { "prettierd" },
           rust = { "rustfmt" },
           bash = { "shfmt" },
           toml = { "taplo" },
