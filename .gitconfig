@@ -1,7 +1,7 @@
 [http]
-	proxy = socks5://127.0.0.1:7890
+	proxy = http://127.0.0.1:7890
 [https]
-	proxy = socks5://127.0.0.1:7890
+	proxy = http://127.0.0.1:7890
 [user]
 	email = f2940015504@gmail.com
 	name = Aromia

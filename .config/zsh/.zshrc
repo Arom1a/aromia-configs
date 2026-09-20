@@ -52,6 +52,9 @@ fi
 if [ "$(uname -m)" = "arm64" ]; then
     . "$HOME/.cargo/env"
 fi
+if [ "$(uname -m)" = "x86_64" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # 15150 TA
 if [ "$(uname -m)" = "arm64" ]; then

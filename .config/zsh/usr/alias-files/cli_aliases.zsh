@@ -3,6 +3,7 @@ alias ea="eza -a" # all
 alias el="eza -l" # long
 alias ela="eza -la" # long and all
 alias ead="eza -aD" # dir only
+alias eat="eza -la --sort=time" # time
 alias et1="eza -a --tree --level=1"
 alias et2="eza -a --tree --level=2"
 alias et3="eza -a --tree --level=3"
