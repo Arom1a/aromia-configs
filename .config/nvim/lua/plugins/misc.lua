@@ -47,7 +47,7 @@ return {
   -- auto detect buffer's indent size
   {
     "nmac427/guess-indent.nvim",
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       require("guess-indent").setup()
     end,
@@ -60,15 +60,21 @@ return {
       indent = {
         enabled = true,
         indent = {
-          hl = {
-            "SnacksIndent1",
-            "SnacksIndent2",
-            "SnacksIndent3",
-            "SnacksIndent4",
-            "SnacksIndent5",
-            "SnacksIndent6",
-            "SnacksIndent7",
-            "SnacksIndent8",
+          hl = "Whitespace",
+          char = "▏",
+        },
+        scope = {
+          enabled = false,
+        },
+        chunk = {
+          enabled = true,
+          hl = "SnacksIndent2",
+          char = {
+            corner_top = "╭",
+            corner_bottom = "╰",
+            horizontal = "─",
+            vertical = "│",
+            arrow = ">",
           },
         },
       },
