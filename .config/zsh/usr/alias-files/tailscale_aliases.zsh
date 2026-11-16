@@ -1,0 +1,7 @@
+alias ts="tailscale"
+alias tsup="sudo tailscale up"
+alias tsdn="sudo tailscale down"
+alias tss="tailscale status"
+alias tsexit="sudo tailscale set --exit-node"
+alias tsnoexit="sudo tailscale set --exit-node="
+alias tslsexit="tailscale exit-node list"

@@ -146,6 +146,9 @@ source $ZDOTDIR/usr/alias-files/tmux_aliases.zsh
 # Aliasses for cargo
 source $ZDOTDIR/usr/alias-files/cargo_aliases.zsh
 
+# Aliasses for tailscale
+source $ZDOTDIR/usr/alias-files/tailscale_aliases.zsh
+
 # Importing scripts
 source $ZDOTDIR/usr/scripts/cfile.zsh
 source $ZDOTDIR/usr/scripts/fsleep.zsh
